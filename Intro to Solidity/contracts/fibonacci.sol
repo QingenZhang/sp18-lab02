@@ -13,15 +13,15 @@ contract Fibonacci {
     function fibIter(uint n) public returns (uint) {
         if (n == 0) return 0;
         else if (n == 1) return 1;
-        uint m = 1;
-        uint n = 0;
+        uint x = 1;
+        uint y = 0;
         n = n - 2;
         while (n >= 0) {
-            tmp = m + n;
-            n = m;
-            m = tmp;
+            uint tmp = x + y;
+            y = x;
+            x = tmp;
             n = n - 1;
         }
-        return m;
+        return x;
     }
 }
